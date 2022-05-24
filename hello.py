@@ -16,6 +16,7 @@ import glob
     "--ftype", prompt="Pass in the type of file", help="Pass in the file type:  i.e csv"
 )
 def search(path, ftype):
+    """This is a tool that search for patterns like *.csv"""
     results = glob.glob(f"{path}/*.{ftype}")
     click.echo(click.style("Found Matches:", fg="red"))
     for result in results:
